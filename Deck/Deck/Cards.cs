@@ -1,33 +1,48 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CardCollection
 {
-    class Cards
+    public class Cards
     {
 
-        public int CardNumber { get; set; }
+        public CardType CardNumber { get; set; }
 
         public Suit CardSuit { get; set; }
 
 
-
-
-        public Cards(int Number, Suit suit)
+        public Cards(CardType Number, Suit suit)
         {
             CardNumber = Number;
             CardSuit = suit;
-
         }
     }
 
-    enum Suit
+    public enum Suit
     {
         Spade = 1,
         Club,
         Heart,
         Diamond
+    }
+
+    public enum CardType
+    {
+        Ace = 1,
+        Two,
+        Three,
+        Four,
+        Five,
+        Six,
+        Seven,
+        Eight,
+        Nine,
+        Ten,
+        Jack,
+        Queen,
+        King
     }
 
 
