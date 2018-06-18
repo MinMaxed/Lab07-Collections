@@ -5,7 +5,7 @@ This lab uses Enumerators to test Collections in the form of Decks and Cards. It
 
 
 ## Visual
-![alt text]()
+![alt text](https://github.com/MinMaxed/Lab07-Collections/blob/master/Visual.png)
 
 
 
