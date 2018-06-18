@@ -19,8 +19,7 @@ namespace XUnitTestProject1
             Deck<Cards> deck = new Deck<Cards> { card1 };
 
 
-
-            Assert.True(deck.Add(card1));
+            Assert.False(deck.Add(card1));
             Assert.True(deck.Add(card2));
         }
 
@@ -43,11 +42,40 @@ namespace XUnitTestProject1
         [Fact]
         public void TestRemoveACardThatExists()
         {
+            //Ace of spades
+            Cards card1 = new Cards((CardType)1, (Suit)1);
+            //two of clubs
+            Cards card2 = new Cards((CardType)2, (Suit)2);
+            //10 of clubs
+            Cards card10 = new Cards((CardType)10, (Suit)2);
+            //king of spades
+            Cards card13 = new Cards((CardType)13, (Suit)1);
+
+            Deck<Cards> deck = new Deck<Cards> { card1, card2, card10, card13 };
+
+            Assert.True(deck.Remove(card13));
+
+
 
         }
         [Fact]
         public void TestRemoveACardThatDoesntExist()
         {
+            //Ace of spades
+            Cards card1 = new Cards((CardType)1, (Suit)1);
+            //two of clubs
+            Cards card2 = new Cards((CardType)2, (Suit)2);
+            //10 of clubs
+            Cards card10 = new Cards((CardType)10, (Suit)2);
+            //king of spades
+            Cards card13 = new Cards((CardType)13, (Suit)1);
+            //two of hearts
+            Cards card15 = new Cards((CardType)2, (Suit)3);
+
+            Deck<Cards> deck = new Deck<Cards> { card1, card2, card10, card13 };
+
+            Assert.False(deck.Remove(card15));
+
 
         }
 

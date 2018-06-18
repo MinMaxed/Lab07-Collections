@@ -16,17 +16,19 @@ namespace CardCollection
         {
             bool newlyAdded = false;
 
-            if (cardDeck.Equals(card))
+            for (int i = 0; i < cardDeck.Length; i++)
             {
-                Console.WriteLine("I'm already in the deck");
-                return newlyAdded;
+                if (card.Equals(cardDeck[i]))
+                {
+                    Console.WriteLine("I'm already in the deck");
+                    return newlyAdded;
+                }
             }
-                   
             if (count == cardDeck.Length)
             {
                 Array.Resize(ref cardDeck, cardDeck.Length * 2);
             }
-                newlyAdded = true;
+            newlyAdded = true;
             cardDeck[count++] = card;
 
             return newlyAdded;
@@ -59,19 +61,24 @@ namespace CardCollection
         }
 
 
-        //remove a card
-        public void Remove(X card)
+        //remove a card if it exists in the deck by finding it and setting it back to null
+        public bool Remove(X card)
         {
+            bool isRemoved = false;
             for (int i = 0; i < cardDeck.Length; i++)
             {
                 if (card.Equals(cardDeck[i]))
                 {
-                    cardDeck.(i);
+                    cardDeck[i] = default;
+
+                    isRemoved = true;
+                    Console.WriteLine($" Successfully removed");
+                    return isRemoved;
                 }
             }
 
-
-
+            Console.WriteLine("That card was not found in the deck");
+            return isRemoved;
         }
 
 
