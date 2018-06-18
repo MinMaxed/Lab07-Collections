@@ -1,0 +1,11 @@
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\bin\Debug\netcoreapp2.1\CardCollection.deps.json
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\bin\Debug\netcoreapp2.1\CardCollection.runtimeconfig.json
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\bin\Debug\netcoreapp2.1\CardCollection.runtimeconfig.dev.json
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\bin\Debug\netcoreapp2.1\CardCollection.dll
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\bin\Debug\netcoreapp2.1\CardCollection.pdb
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\obj\Debug\netcoreapp2.1\CardCollection.csprojAssemblyReference.cache
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\obj\Debug\netcoreapp2.1\CardCollection.csproj.CoreCompileInputs.cache
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\obj\Debug\netcoreapp2.1\CardCollection.AssemblyInfoInputs.cache
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\obj\Debug\netcoreapp2.1\CardCollection.AssemblyInfo.cs
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\obj\Debug\netcoreapp2.1\CardCollection.dll
+C:\Users\Max\codefellows\401 ASP.NET C#\Lab07-Collections\Deck\Deck\obj\Debug\netcoreapp2.1\CardCollection.pdb
