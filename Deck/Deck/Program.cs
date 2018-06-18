@@ -44,10 +44,6 @@ namespace CardCollection
             card7, card8, card9, card10, card11, card12, card13, card14, card15};
 
 
-            //proof each are there
-
-
-
             //foreach (Cards card in deck)
             //{
             //    Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
@@ -66,18 +62,14 @@ namespace CardCollection
 
 
 
-            //foreach (Cards card in deck)
-            //{
-            //    Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
-            //}
-            ////deck.Print();
-            //Console.ReadKey();
-
-
-            deck.Shuffle();
-            deck.Print();
+            foreach (Cards card in deck)
+            {
+                Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
+            }
+            //deck.Print();
             Console.ReadKey();
-
+            Console.Clear();
+            deck.Remove(card16);
 
 
             foreach (Cards card in deck)
@@ -87,9 +79,9 @@ namespace CardCollection
                 Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
                 }
             }
-
             //deck.Print();
             Console.ReadKey();
+
         }
     }
 }
