@@ -45,40 +45,31 @@ namespace CardCollection
             //three of diamonds
             Cards card16 = new Cards((CardType)3, (Suit)4);
 
-            //reading list after adding a card
+            //showing initial count
             deck.Print(deck);
-
-            //deck.Print();
             Console.ReadKey();
-            //Console.Clear();
             Console.WriteLine("-------------------------");
 
+            //shuffle and display the count after the shuffle to make sure nothing is lost
             deck.Shuffle();
             deck.Print(deck);
 
             Console.ReadKey();
             Console.WriteLine("-------------------------");
 
-
-            //using add method
+            //using add method and showing new count
             deck.Add(card16);
             deck.Print(deck);
 
 
-
-            //reading list after adding a card
-
-            //deck.Print();
             Console.ReadKey();
-            //Console.Clear();
             Console.WriteLine("-------------------------");
 
-
+            //showing that a mutated deck can shuffle and have the same count
             deck.Shuffle();
             deck.Print(deck);
 
             Console.ReadKey();
-            //Console.Clear();
 
             deck.Remove(card16);
             deck.Print(deck);
@@ -86,36 +77,12 @@ namespace CardCollection
 
             Console.WriteLine("-------------------------");
 
-
+            //checking count after removing & shuffle
             deck.Shuffle();
             deck.Print(deck);
 
             Console.ReadKey();
-
             Console.WriteLine("-------------------------");
-
-
-            //using add method
-            deck.Add(card16);
-            deck.Print(deck);
-            Console.WriteLine("-------------------------");
-
-
-            deck.Shuffle();
-            deck.Print(deck);
-
-            Console.ReadKey();
-
-            //reading list after removing a card
-            //foreach (Cards card in deck)
-            //{
-            //    if (card != null)
-            //    {
-            //    Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
-            //    }
-            //}
-            //deck.Print();
-            //Console.ReadKey();
 
         }
     }

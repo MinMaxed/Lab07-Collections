@@ -11,7 +11,12 @@ namespace CardCollection
 
         int count;
 
-        //Add Method
+        /// <summary>
+        /// Adding a card to the List if its not already in there
+        /// and then resizing it if necessary
+        /// </summary>
+        /// <param name="card">card to be added</param>
+        /// <returns></returns>
         public bool Add(X card)
         {
             bool newlyAdded = false;
@@ -35,7 +40,6 @@ namespace CardCollection
             return newlyAdded;
         }
 
-        //rng for shuffling
         /// <summary>
         /// takes the count and decrements it each iterationas a random card
         /// is placed at a new index, solution based on a stack overflow
@@ -60,7 +64,11 @@ namespace CardCollection
         }
 
 
-        //remove a card if it exists in the deck by finding it and setting it back to null
+        /// <summary>
+        /// If the specified card is in the list, remove it
+        /// </summary>
+        /// <param name="card">card you want to remove</param>
+        /// <returns></returns>
         public bool Remove(X card)
         {
             bool isRemoved = false;
@@ -85,7 +93,8 @@ namespace CardCollection
         }
 
 
-        //print the cards
+        //print the cards out to the console 
+        //and show how many cards are currently in the deck
         public void Print(Deck<Cards> deck)
         {
             int showCount = 1;
