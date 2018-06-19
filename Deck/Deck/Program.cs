@@ -6,7 +6,6 @@ namespace CardCollection
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             //Ace of spades
             Cards card1 = new Cards((CardType)1, (Suit)1);
@@ -43,44 +42,80 @@ namespace CardCollection
             Deck<Cards> deck = new Deck<Cards> { card1, card2, card3, card4, card5, card6,
             card7, card8, card9, card10, card11, card12, card13, card14, card15};
 
-
-            //foreach (Cards card in deck)
-            //{
-            //    Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
-            //}
-
-            //Console.ReadKey();
-            //Console.WriteLine("-----------------");
-
-
             //three of diamonds
             Cards card16 = new Cards((CardType)3, (Suit)4);
+
+            //reading list after adding a card
+            deck.Print(deck);
+
+            //deck.Print();
+            Console.ReadKey();
+            //Console.Clear();
+            Console.WriteLine("-------------------------");
+
+            deck.Shuffle();
+            deck.Print(deck);
+
+            Console.ReadKey();
+            Console.WriteLine("-------------------------");
 
 
             //using add method
             deck.Add(card16);
+            deck.Print(deck);
 
 
 
-            foreach (Cards card in deck)
-            {
-                Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
-            }
+            //reading list after adding a card
+
             //deck.Print();
             Console.ReadKey();
-            Console.Clear();
+            //Console.Clear();
+            Console.WriteLine("-------------------------");
+
+
+            deck.Shuffle();
+            deck.Print(deck);
+
+            Console.ReadKey();
+            //Console.Clear();
+
             deck.Remove(card16);
-
-
-            foreach (Cards card in deck)
-            {
-                if (card != null)
-                {
-                Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
-                }
-            }
-            //deck.Print();
+            deck.Print(deck);
             Console.ReadKey();
+
+            Console.WriteLine("-------------------------");
+
+
+            deck.Shuffle();
+            deck.Print(deck);
+
+            Console.ReadKey();
+
+            Console.WriteLine("-------------------------");
+
+
+            //using add method
+            deck.Add(card16);
+            deck.Print(deck);
+            Console.WriteLine("-------------------------");
+
+
+            deck.Shuffle();
+            deck.Print(deck);
+
+            Console.ReadKey();
+
+            //reading list after removing a card
+            //foreach (Cards card in deck)
+            //{
+            //    if (card != null)
+            //    {
+            //    Console.WriteLine($"{card.CardNumber} of {card.CardSuit}");
+            //    }
+            //}
+            //deck.Print();
+            //Console.ReadKey();
 
         }
     }

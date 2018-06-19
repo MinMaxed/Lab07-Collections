@@ -9,7 +9,7 @@ namespace CardCollection
     {
         X[] cardDeck = new X[15];
 
-        int count = 0;
+        int count;
 
         //Add Method
         public bool Add(X card)
@@ -31,33 +31,32 @@ namespace CardCollection
             newlyAdded = true;
             cardDeck[count++] = card;
 
+            count = cardDeck.Length;
             return newlyAdded;
         }
 
         //rng for shuffling
-        private static Random shuffling = new Random();
         /// <summary>
         /// takes the count and decrements it each iterationas a random card
         /// is placed at a new index, solution based on a stack overflow
         /// </summary>
         public bool Shuffle()
         {
-            bool shuffled = false;
             int toShuffle = cardDeck.Length;
-            if (shuffled == false)
-            {
+            //count = cardDeck.Length;
 
-                while (toShuffle > 1)
-                {
-                    toShuffle--;
-                    int randomCard = shuffling.Next(0, toShuffle + 1);
-                    X value = cardDeck[randomCard];
-                    cardDeck[randomCard] = cardDeck[toShuffle];
-                    cardDeck[toShuffle] = value;
-                    shuffled = true;
-                }
+            Random shuffling = new Random();
+            while (toShuffle > 1)
+            {
+                toShuffle--;
+                int randomCard = shuffling.Next(toShuffle + 1);
+                X value = cardDeck[randomCard];
+                cardDeck[randomCard] = cardDeck[toShuffle];
+                cardDeck[toShuffle] = value;
             }
-            return shuffled;
+            //count = cardDeck.Length;
+
+            return true;
         }
 
 
@@ -65,6 +64,8 @@ namespace CardCollection
         public bool Remove(X card)
         {
             bool isRemoved = false;
+            //count = cardDeck.Length;
+
             for (int i = 0; i < cardDeck.Length; i++)
             {
                 if (card.Equals(cardDeck[i]))
@@ -73,24 +74,27 @@ namespace CardCollection
 
                     isRemoved = true;
                     Console.WriteLine($" Successfully removed");
+                    //count = cardDeck.Length;
                     return isRemoved;
                 }
             }
 
+            //count = cardDeck.Length;
             Console.WriteLine("That card was not found in the deck");
             return isRemoved;
         }
 
 
         //print the cards
-        public void Print()
+        public void Print(Deck<Cards> deck)
         {
-            count = cardDeck.Length;
-            for (int i = 0; i < count; i++)
+            int showCount = 1;
+            foreach (Cards card in deck)
             {
-                if (cardDeck[i] != null)
+                if(card != null)
                 {
-                    Console.WriteLine($"{cardDeck[i]} {i + 1}");
+                Console.WriteLine($"{showCount} _ {card.CardNumber} of {card.CardSuit}");
+                showCount++;
                 }
             }
         }
